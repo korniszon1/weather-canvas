@@ -191,6 +191,10 @@ canvas
     left:0;
     z-index: 2;
 }
+#canvas
+{
+    position: fixed;
+}
 .footer
 {
     position: fixed;
