@@ -45,7 +45,7 @@ function twoDigitFormat(x){
     for(i = 1; i<=7;i++)
     {
         let weekDayIndex = ((date.getDay()-1+i)>6) ? date.getDay()-8+i : date.getDay()-1+i;
-        futureHtmlWeather += `<li class="col future-weather-list"><div>${weekday[weekDayIndex]}</div><img class="img" src="img/${weatherDataFuture.daily[i].weather[0].icon.slice(0,2)}.png"><div> Dzień ${celsius(weatherDataFuture.daily[i].temp.day)}&#176</div> <div style="color:rgb(230,230,230);"> Noc ${celsius(weatherDataFuture.daily[i].temp.night)}&#176</div></li>`;
+        futureHtmlWeather += `<li class="col future-weather-list"><div>${weekday[weekDayIndex]}</div><img class="img" src="img/low/${weatherDataFuture.daily[i].weather[0].icon.slice(0,2)}.png"><div> Dzień ${celsius(weatherDataFuture.daily[i].temp.day)}&#176</div> <div style="color:rgb(230,230,230);"> Noc ${celsius(weatherDataFuture.daily[i].temp.night)}&#176</div></li>`;
     }
     const currentWeather = weatherData.weather[0];
     const curentCoordLon = weatherData.coord.lon;  
