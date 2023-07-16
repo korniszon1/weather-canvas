@@ -35,7 +35,6 @@ function twoDigitFormat(x){
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityWeather}&units=metric&lang=pl&appid=121874805ea22f6768296e88d8148aaf`;
     const api = await fetch(url);
     const weatherData = await api.json();
-    console.log(weatherData)
     const lat = weatherData.coord.lat, lon = weatherData.coord.lon;
     const urlFuture = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=121874805ea22f6768296e88d8148aaf`;
     const apiFuture = await fetch(urlFuture);
