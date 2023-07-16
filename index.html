@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pogoda</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container h-100">
+    <div class="data-container p-5">
+      <button class='city-search' type="button" data-bs-toggle="offcanvas" data-bs-target="#SearchForm" aria-controls="SearchForm">
+        <h2 class='fs-1 city-place p-5 text-center text-light text-nowrap text-uppercase fw-bolder white'><img class='img-icon' src='img/mGlass.png' alt='Szukaj miasta'></h2>
+      </button>
+      <div class="spinner-grow text-light" style="width: 6rem; height: 6rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+      <div class="full-screen">
+        <div id="SearchForm" class="offcanvas col-12 col-md-6">
+          <div class="mb-3">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="row mb-3 list-container">
+              <div class="col">
+                <div class="form-floating">
+                  <input type="text" id="autocomplete" class="form-control" placeholder="Podaj nazwę miasta" onClick="this.select();">
+                  <label for="floatingSelect">Podaj nazwę miasta</label>
+                </div>
+              </div>
+              <div class="col-12 col-md-3">
+                <div class="form-floating">
+                  <select class="form-select" id="countrySelect" aria-label="Wybierz kraj"></select>
+                  <label for="floatingSelect">Wybierz kraj</label>
+                </div>  
+              </div>
+              <ul id="saved" class="list">
+              </ul>
+              <ul id="list" class="list">
+              </ul>
+          </div> 
+        </div> 
+        
+      </div>
+
+  </div>
+  <div class="footer">
+      <p>Jan Przybyło</p>
+
+  </div>
+  
+
+  
+
+  <canvas id="canvas"></canvas>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="weather.js"></script>
+  <script src="cities.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

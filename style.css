@@ -1,0 +1,208 @@
+body
+{
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background: rgb(153,204,255);
+    background: linear-gradient(90deg, rgba(153,204,255,1) 0%, rgb(169, 212, 255) 35%, rgb(126, 191, 255) 100%); 
+}
+body::after
+{
+    position: fixed;
+    content: '';
+    top:0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(153,204,255,0)30%, rgb(6, 176, 255,0.2) 100%);
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+.container
+{
+    color: white;
+}
+.h2
+{
+    z-index: 3;
+    letter-spacing: 0.25rem;
+}
+.img-icon
+{
+    width: 2rem;
+    padding-bottom: 0.5rem;
+    padding-right: 0.25rem;
+}
+.full-screen
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-close
+{
+    min-width: 1rem;
+}
+#SearchForm
+{
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: static;
+    padding: 1rem;
+    max-height: 90%;
+}
+input, select
+{
+    opacity: 0.8;
+}
+.list-container
+{
+    min-height: 10rem;
+    max-height: 90%;
+    overflow-y:auto;
+}
+.list
+{
+    text-transform: capitalize;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.city-list
+{
+    font-weight: bolder;
+    letter-spacing: 0.2rem;
+    color: white;
+    text-shadow: 0px 0px 2px grey;
+    cursor: pointer;
+    font-size: large;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background-color 250ms;
+}
+.right-list
+{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-transform: capitalize;
+    list-style-type: none;
+    margin: 0;
+    padding: 1rem;
+    border-radius: 15px;
+}
+.future-weather-list
+{
+    display: flex;
+    justify-content: start;
+    margin: 1rem;
+    padding: 0.5rem;
+    padding-bottom: 0.7rem;
+    height: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.detail-weather-list
+{
+    display: flex;
+    justify-content: start;
+    margin: 1rem;
+    padding-bottom: 0.7rem;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.future-weather-list div
+{
+    min-width: 5rem;
+    padding-bottom: 12rem;
+}
+.future-weather-list img
+{
+    height: auto;
+    min-width: 2rem;
+    overflow: hidden;
+    margin-right: 2rem;
+}
+.offcanvas-backdrop
+{
+    background-color: rgba(0, 0, 0, 0.445) !important;
+}
+.city-list:hover
+{
+    background-color: rgba(228, 228, 228, 0.281);
+}
+a
+{
+    text-decoration: none !important;
+    color: black !important;
+}
+.city-list-error
+{
+    font-size: large;
+    padding: 1.5rem;
+}
+.city-search
+{
+    position: relative;
+    z-index: 4;
+    background-color: rgba(153,204,255,0);
+    border: 0px solid;
+    border-radius: 5rem;
+    transition: background-color 300ms;
+}
+.city-search:hover
+{
+    background-color: rgba(153,204,255,0.5);
+}
+#SearchForm
+{
+    color: black
+}
+.temp
+{
+    font-size: 5rem;
+}
+.letter
+{
+    opacity: 0%;
+}
+.letter-fade
+{
+    animation-name: fadeOut;
+    animation-duration: 200ms;
+}
+@keyframes fadeOut{
+    from {opacity: 0%}
+    to{opacity: 100%}
+}
+canvas
+{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 2;
+}
+.footer
+{
+    position: fixed;
+    left: 0;
+    background-color: rgba(255,255,255,0.1);
+    overflow: hidden;
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+    font-style: italic;
+    color:rgba(255,255,255,0.8);
+    width: 100vw;
+    height: 50px;
+    bottom: 0;
+    z-index: 2;
+}
