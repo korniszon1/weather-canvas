@@ -94,6 +94,9 @@ function twoDigitFormat(x){
     const iconType = currentWeather.icon.slice(2,3);
     typeOfWeather = currentWeather.main;
     animate();
+    const loader = document.getElementById('loader');
+    loader.classList.add('fade-out');
+    loader.addEventListener('animationend',()=>{document.body.removeChild(loader);})
 }());
 window.addEventListener('resize', function(){
     canvas.width = window.innerWidth;
